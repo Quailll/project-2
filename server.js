@@ -14,11 +14,11 @@ const PORT = process.env.PORT || 3001;
 app.set("view engine", "handlebars");
 app.engine("handlebars", hbs.engine);
 
-// app.engine("handlebars", expvhs());
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(require("./controller"));
 
 // app.use(require("./controller/loginRoutes"));
 

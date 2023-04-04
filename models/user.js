@@ -1,15 +1,24 @@
-// const { Model, DataTypes } = require("sequelize");
-// const sequelize = require("../config/connection");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-// class User extends Model {}
+class User extends Model {
+  checkPassword(login) {
+    return bcrypt.compare(login, this.password)
+  }
+}
 
-// User.init(
-//   {
-//     name: {
-//       type: DataTypes.STRING,
-//     },
-//   },
-//   { sequelize, modelName: "user" }
-// );
+User.init(
+  {
+    id: {
 
-// module.exports = User;
+    }
+    userName: {
+      type: DataTypes.STRING,
+    },
+    password: {
+    }
+  },
+  { sequelize, modelName: "user" }
+);
+
+module.exports = User;
