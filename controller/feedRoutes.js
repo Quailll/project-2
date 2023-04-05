@@ -2,17 +2,23 @@ const router = require("express").Router();
 const { Shoe, User } = require("../models/");
 const withAuth = require("../util/auth");
 
-router.get("/home", withAuth, async (req, res) => {
+router.get("/feed", withAuth, async (req, res) => {
   try {
     const shoeData = await Shoe.findAll({
-      where: { userId: req.session.userId },
+      include: [User],
     });
-
     const shoes = shoeData.map((shoe) => shoe.get({ plain: true }));
-    res.render("user-shoes", { shoes });
+
+    res.render("all-shoes", { layout: "feed", shoes });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-module.exports = router;
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/feed");
+    return;
+  }
+  res.render("login");
+});
