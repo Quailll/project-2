@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Shoe, User } = require("../models/");
 const withAuth = require("../util/auth");
 
-router.get("/home", withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const shoeData = await Shoe.findAll({
       where: { userId: req.session.userId },
