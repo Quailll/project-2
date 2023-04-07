@@ -5,26 +5,24 @@ const loginForm = async (e) => {
   const passwordEl = document.querySelector("#username-password");
 
   //might have to change ('/api/user)
-  const response = await fetch('/api/user', {
-    method: 'POST', 
+  const response = await fetch("/", {
+    method: "POST",
     body: JSON.stringify({
       username: usernameEl.value,
       password: passwordEl.value,
     }),
     headers: {
-      'Content-Type' : 'application/json'
+      "Content-Type": "application/json",
     },
   });
-  if(response.ok){
-    document.location.replace('/home')
+  if (response.ok) {
+    document.location.replace("/home");
   } else {
-    alert('Login Failed');
+    alert("Login Failed");
   }
 };
 
 document.querySelector("#login-form").addEventListener("click", loginForm);
-
-
 
 const signupForm = async (e) => {
   event.preventDefault();
