@@ -3,7 +3,7 @@ const { Shoe } = require("../../models");
 const withAuth = require("../../util/auth");
 
 
-router.post("/home", withAuth, async (req, res)=>{  
+router.post("/", withAuth, async (req, res)=>{  
   try {
     const shoes = await Shoe.create({
       id: req.body.id,
@@ -16,7 +16,7 @@ router.post("/home", withAuth, async (req, res)=>{
     res.status(500).json(err)
 }}); 
 
-router.put("/home/:id", withAuth, async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const shoes = await Shoe.update({
       name: req.body.name,
@@ -34,7 +34,7 @@ router.put("/home/:id", withAuth, async (req, res) => {
 }
 });
 
-router.delete("/home/:id", withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const shoes = await Shoe.destroy({
       where: {

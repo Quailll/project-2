@@ -18,7 +18,8 @@ router.post("/", async(req, res) => {
   }
 }); 
 
-router.post("/", async (req, res) => {
+//login was /
+router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({
       where: {
@@ -51,7 +52,8 @@ router.post("/", async (req, res) => {
 });
 
 // make a logout page if needed
-router.post("/home", (req, res) => {
+//logout was home
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
