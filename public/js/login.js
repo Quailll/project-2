@@ -1,11 +1,11 @@
-const loginForm = async (e) => {
+const loginForm = async (event) => {
   event.preventDefault();
 
   const usernameEl = document.querySelector("#username-login");
   const passwordEl = document.querySelector("#username-password");
 
   //might have to change ('/api/user)
-  const response = await fetch("/", {
+  const response = await fetch("/api/user", {
     method: "POST",
     body: JSON.stringify({
       username: usernameEl.value,
@@ -22,9 +22,11 @@ const loginForm = async (e) => {
   }
 };
 
-document.querySelector("#login-form").addEventListener("click", loginForm);
+document.querySelector("#login-form").addEventListener("submit", loginForm);
 
-const signupForm = async (e) => {
+
+
+const signupForm = async (event) => {
   event.preventDefault();
 
   const usernameEl = document.querySelector("#signup-username");
@@ -48,4 +50,4 @@ const signupForm = async (e) => {
   }
 };
 
-document.querySelector("#signup-form").addEventListener("click", signupForm);
+document.querySelector("#signup-form").addEventListener("submit", signupForm);
