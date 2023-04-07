@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Gaze Head</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Gaze</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Timeline</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="p-3">
+  <h2>Your Collection</h2>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    Post New Shoes
+  </button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Post New Shoes</h5>
+          <button type="button" data-toggle="modal" data-target="#myModal"  class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- add form here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="collection" class="flex-wrap d-flex">
+  
+  <div class="card m-5 text-center" style="width: 25rem;">
+    <img src="https://i.ebayimg.com/images/g/a9oAAOSwAdljfaD5/s-l1600.jpg" class="card-img-top" alt="panda">
+    <div class="card-body">
+      <h5 class="card-title">`${shoes.name}`</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">`${shoes.brand}</li>
+      <li class="list-group-item">`${shoes.style}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Edit</a>
+      <a href="#" class="card-link">Delete</a>
+    </div>
+  </div>
+
+  <div class="card m-5 text-center" style="width: 25rem;">
+    <img src="https://i.ebayimg.com/images/g/a9oAAOSwAdljfaD5/s-l1600.jpg" class="card-img-top" alt="panda">
+    <div class="card-body">
+      <h5 class="card-title">`${shoes.name}`</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">`${shoes.brand}</li>
+      <li class="list-group-item">`${shoes.style}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Edit</a>
+      <a href="#" class="card-link">Delete</a>
+    </div>
+  </div>
+
+  <div class="card m-5 text-center" style="width: 25rem;">
+    <img src="https://i.ebayimg.com/images/g/a9oAAOSwAdljfaD5/s-l1600.jpg" class="card-img-top" alt="panda">
+    <div class="card-body">
+      <h5 class="card-title">`${shoes.name}`</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">`${shoes.brand}</li>
+      <li class="list-group-item">`${shoes.style}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Edit</a>
+      <a href="#" class="card-link">Delete</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+<footer>
+
+</footer>
+
+</body>
+
+
+</html>
