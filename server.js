@@ -20,17 +20,17 @@ const sess = {
   secret: "secret",
   cookie: {
     maxAge: 200000,
-    httpOnly: true,
-    secure: false,
-    sameSite: "strict",
+    httpOnly: true, 
+    secure: false, 
+    sameSite: "strict", 
   },
   resave: false,
   saveUnitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
+    db: sequelize 
   }),
 };
-app.use(session(sess));
+app.use(session(sess))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
