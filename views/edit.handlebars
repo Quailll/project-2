@@ -1,3 +1,25 @@
-<form>
+<div class="p-3">
+  <h2>Edit</h2>
+</div>
+<div>
+  <form id="name-edit">
+    <div class="form-group">
+      <input type="hidden" name="shoe-id" value="{{Shoe.id}}" />
+
+      <label for="exampleFormControlTextarea1">Name</label>
+      <input name="shoe-name" value="{{Shoe.name}}" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+
+      <label for="exampleFormControlTextarea1">Brand</label>
+      <input name="shoe-brand" value="{{Shoe.brand}}" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+
+      <label for="exampleFormControlTextarea1">Style</label>
+      <input name="shoe-style" value="{{Shoe.style}}" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+      
+      <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Update</button>
+      <button id="delbtn" type="button" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</button>
+     
+  </form>
+  <div>
+<div>
   
-</form>
+{{!--<script src="/js/edit.js"></script> --}}
