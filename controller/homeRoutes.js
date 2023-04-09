@@ -5,7 +5,7 @@ const withAuth = require("../util/auth");
 router.get("/", withAuth, async (req, res) => {
   try {
     const shoeData = await Shoe.findAll({
-      where: { userId: req.session.userId },
+      where: { user_id: req.session.userId },
     });
 
     const shoes = shoeData.map((shoe) => shoe.get({ plain: true }));
