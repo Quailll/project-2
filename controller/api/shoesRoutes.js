@@ -2,6 +2,17 @@ const router = require("express").Router();
 const { Shoe } = require("../../models");
 const withAuth = require("../../util/auth");
 
+router.get("/", async (req, res) => {
+  try {
+    const shoesData = await Shoe.findAll();
+    res.status(200).json(shoesData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
+  // find all categories
+  // be sure to include its associated Products
+});
 
 router.post("/", withAuth, async (req, res)=>{  
   try {
