@@ -73,5 +73,4 @@ Please refer to the LICENSE in the repo.
 
 ## Screen Shots
 
-![Deployed Home Page](./assets/images/ss1.PNG)
 
