@@ -23,4 +23,15 @@ router.get("/post", withAuth, async (req, res) => {
   }
 });
 
+router.get("/edit/:id", withAuth, async (req, res) => {
+  try {
+  
+    res.render("edit", {id: req.params.id});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
 module.exports = router;

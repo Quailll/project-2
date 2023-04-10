@@ -8,7 +8,7 @@
       
   {{#each shoes}}
   <div class="card m-5 text-center" style="width: 25rem;">
-    <h5>Posted by {{shoes.User.username}} on {{format_date post.createAt}}</h5>
+    <h5>Posted by {{shoes.User.username}} on {{format_date shoes.createAt}}</h5>
     <img src="https://i.ebayimg.com/images/g/a9oAAOSwAdljfaD5/s-l1600.jpg" class="card-img-top" alt="panda">
     <div class="card-body">
       <h5 class="card-title">{{shoes.name}}</h5>
