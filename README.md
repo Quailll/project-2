@@ -37,7 +37,7 @@ AS AN user I will signup then login in the website
   - SO THAT I can see other users’ posts 
 
 - I WANT TO click logout 
-  -SO THAT I can end my user session 
+  - SO THAT I can end my user session 
 
 
 ## License
