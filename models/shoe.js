@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Shoe extends Model {}
+class Shoe extends Model { }
 
 Shoe.init(
   {
@@ -23,10 +23,10 @@ Shoe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // image: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

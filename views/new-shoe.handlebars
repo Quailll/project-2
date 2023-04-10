@@ -12,9 +12,10 @@
 
     <label for="exampleFormControlTextarea1">Style</label>
     <input id="shoe-style" name="shoe-style" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
-    {{!-- <div class="container">
-      <button onclick="uploadFiles()">Open the Uploader</button>
-    </div> --}}
+     <div class="container">
+      <label for="upload">Upload Photo:</label>
+      <input id="upload" name="upload" type="file" onchange="onFileSelected(event)">
+    </div> 
     <br>
     <button type="submit" class="btn btn-primary active" role="button" aria-pressed="true">Post
       Shoe</button>
