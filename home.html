@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" src="./public/css/style.css">
   <title>Gaze Head</title>
 </head>
 
@@ -36,21 +37,36 @@
   </nav>
 <div class="p-3">
   <h2>Your Collection</h2>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-    Post New Shoes
+  <button id="modalBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Post New Shoe
   </button>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Post New Shoes</h5>
-          <button type="button" data-toggle="modal" data-target="#myModal"  class="close" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title" id="exampleModalLabel">New Shoe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <!-- add form here -->
+          <form id="name-edit">
+            <div class="form-group">
+
+              <label for="exampleFormControlTextarea1">Name</label>
+              <input name="shoe-name" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+
+              <label for="exampleFormControlTextarea1">Brand</label>
+              <input name="shoe-brand" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+
+              <label for="exampleFormControlTextarea1">Style</label>
+              <input name="shoe-style" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
+
+              <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Post
+                Shoe</button>
+
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -59,7 +75,6 @@
       </div>
     </div>
   </div>
-</div>
 
 <div id="collection" class="flex-wrap d-flex">
   
@@ -116,7 +131,7 @@
 
 </footer>
 
+<script src="./public/js/newshoe.js"></script>
 </body>
-
 
 </html>

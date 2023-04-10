@@ -14,35 +14,39 @@ router.get("/", async (req, res) => {
   // be sure to include its associated Products
 });
 
-router.post("/", withAuth, async (req, res)=>{  
+router.post("/", withAuth, async (req, res) => {
   try {
     const shoes = await Shoe.create({
       id: req.body.id,
       name: req.body.name,
       brand: req.body.brand,
-      style: req.body.style
+      style: req.body.style,
+      // image: req.body.image,
     });
-    res.status(200).json(shoes)
-  } catch(err){
-    res.status(500).json(err)
-}}); 
+    res.status(200).json(shoes);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.put("/:id", withAuth, async (req, res) => {
   try {
-    const shoes = await Shoe.update({
-      name: req.body.name,
-      brand: req.body.brand,
-      style: req.body.style
-    },
-    {
-      where: {
-        id: req.params.id, 
+    const shoes = await Shoe.update(
+      {
+        name: req.body.name,
+        brand: req.body.brand,
+        style: req.body.style,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
       }
-    });
-    res.status(200).json(shoes)
-  } catch(err){
+    );
+    res.status(200).json(shoes);
+  } catch (err) {
     res.status(500).json(err);
-}
+  }
 });
 
 router.delete("/:id", withAuth, async (req, res) => {
@@ -50,12 +54,12 @@ router.delete("/:id", withAuth, async (req, res) => {
     const shoes = await Shoe.destroy({
       where: {
         id: req.params.id,
-      }
+      },
     });
-  res.status(200).json(shoes)
-  } catch(err){
-  res.status(500).json(err);
+    res.status(200).json(shoes);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
-module.exports = router
+module.exports = router;
