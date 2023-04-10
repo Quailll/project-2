@@ -1,22 +1,23 @@
-// let fileUrls = "";
-// console.log(fileUrls);
+//import { Upload } from "upload-js";
 
-// const uploader = Uploader({
-//   apiKey: "public_W142hmh9BJhNo99rBLLRGnrAMbQ2",
-// });
-// uploader.open({ maxFileCount: 1 }).then(
-//   (files) => {
-//     const fileUrls = files.map((x) => x.fileUrl).join("\n");
-//     const success =
-//       fileUrls.length === 0
-//         ? "No file selected."
-//         : `File uploaded:\n\n${fileUrls}`;
-//     alert(success);
-//   },
-//   (error) => {
-//     alert(error);
-//   }
-// );
+
+
+const upload = Upload({ apiKey: "public_W142hmh9BJhNo99rBLLRGnrAMbQ2" })
+
+
+async function onFileSelected(event) {
+  const [file] = event.target.files;
+  const { fileUrl } = await upload.uploadFile(
+    file,
+    {
+      onBegin: ({ cancel }) => console.log("File upload started!"),
+      onProgress: ({ progress }) => console.log(`File uploading... ${progress}%`)
+    }
+  );
+  console.log(`File uploaded! ${fileUrl}`);
+  window.fileUrl = fileUrl; // global scope window
+}
+
 
 const newShoe = async (event) => {
   event.preventDefault();
@@ -31,6 +32,7 @@ const newShoe = async (event) => {
       name: nameEl.value,
       brand: brandEl.value,
       style: styleEl.value,
+      img_url: window.fileUrl
       // image: fileUrls,
     }),
     headers: { "Content-Type": "application/json" },

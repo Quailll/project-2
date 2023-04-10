@@ -15,13 +15,14 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", withAuth, async (req, res) => {
+
   try {
     const shoes = await Shoe.create({
-      id: req.body.id,
+      user_id: req.session.userId,
       name: req.body.name,
       brand: req.body.brand,
       style: req.body.style,
-      // image: req.body.image,
+      image: req.body.img_url,
     });
     res.status(200).json(shoes);
   } catch (err) {
