@@ -32,33 +32,35 @@ router.post("/", withAuth, async (req, res) => {
 
 router.put("/:id", withAuth, async (req, res) => {
   try {
-    const shoes = await Shoe.update(
-      {
-        name: req.body.name,
-        brand: req.body.brand,
-        style: req.body.style,
-      },
+    const [affectedRows] = await Shoe.update(req.body, 
       {
         where: {
           id: req.params.id,
         },
       }
     );
-    res.status(200).json(shoes);
+      if (affectedRows > 0){
+      res.status(200).end();
+    } else {
+      res.status(404).end();
+    }  
   } catch (err) {
     res.status(500).json(err);
   }
+
 });
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const shoes = await Shoe.destroy({
+    await Shoe.destroy({
       where: {
         id: req.params.id,
       },
     });
-    res.status(200).json(shoes);
+    
+    return res.sendStatus(200)
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
