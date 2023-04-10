@@ -42,7 +42,7 @@ AS AN user I will signup then login in the website
 
 ## License
 
-Please refer to the LICENSE in the repo.
+MIT LICENSE
 
 
 ## Criteria for Project
