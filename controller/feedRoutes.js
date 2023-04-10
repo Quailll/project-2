@@ -6,6 +6,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const shoeData = await Shoe.findAll({
       include: [User],
+      order: [["createdAt", "DESC"]],
     });
     const shoes = shoeData.map((shoe) => shoe.get({ plain: true }));
 
