@@ -7,7 +7,7 @@ const hbs = exphbs.create({});
 const session = require("express-session");
 
 const Handlebars = require("handlebars");
-const helpers = require("./util/helpers");
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;

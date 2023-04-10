@@ -6,6 +6,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const shoeData = await Shoe.findAll({
       where: { user_id: req.session.userId },
+      order: [["createdAt", "DESC"]],
     });
 
     const shoes = shoeData.map((shoe) => shoe.get({ plain: true }));
