@@ -1,7 +1,11 @@
 <div class="p-3">
   <h2>Edit</h2>
 </div>
-<div>
+<div class="card card-form mx-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+<div class="p-3">
   <form id="name-edit" data-id="{{id}}">
     <div class="form-group">
       <input type="hidden" name="shoe-id" value="{{Shoe.id}}" />
@@ -14,12 +18,17 @@
 
       <label for="exampleFormControlTextarea1">Style</label>
       <input name="shoe-style" value="{{Shoe.style}}" class="form-control" id="exampleFormControlTextarea1" rows="1"></input>
-      
-      <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Update</button>
+      <br>
+      <button type="submit" class="btn btn-lg active" role="button" aria-pressed="true">Update</button>
       <button id="delbtn" type="button" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</button>
      
   </form>
   <div>
 <div>
+
+      </div>
+      </div>
+      </div>
+
   
 <script src="/js/edit.js"></script>

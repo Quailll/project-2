@@ -1,6 +1,6 @@
 <div class="p-3">
   <h2>Your Collection</h2>
-  <a href="/home/post" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Post New Shoe</a>
+  <a href="/home/post" class="btn btn-lg active" role="button" aria-pressed="true">Post New Shoe</a>
 </div>  
 
 <div id="collection" class="flex-wrap d-flex">
@@ -8,11 +8,11 @@
   <div class="card m-5 text-center" style="width: 25rem;">
     <img src="{{image}}" class="card-img-top" alt="panda">
     <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
+      <h5 class="card-title">Name: {{name}}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{brand}}</li>
-      <li class="list-group-item">{{style}}</li>
+      <li class="list-group-item">Brand: {{brand}}</li>
+      <li class="list-group-item">Style: {{style}}</li>
     </ul>
     <div class="card-body">
       <a id="edit-btn" href="/home/edit/{{id}}" class="card-link">Edit</a>
