@@ -76,27 +76,34 @@ MIT LICENSE
 ### Login/Signup 
 ![LoginPage](images/Login.png)
 
-When the user enters the website they will be directed to either login and/or signup. 
+When the user enters the website they will be directed to either login or signup. 
 * New users can signup by creating a username and password. 
 * If you already have singned up, all you need to do is login with your created username and password. 
 
 ### Homepage
 ![HomePage](images/Home.png)
 
+When users start their session, they will be redirected to the home page. This is where the user's collection is located. You can also access the homepage through our navigation bar, just click "HOME".
+
 ### New post 
 ![PostPage](images/Post.png)
 
+If the user wants to post a new item, on the homepage, they must click "POST NEW SHOE". The user will be redirected to a new page, where the user will need to fill out a form regarding the name, the brand, the style, and upload a picture of their shoes. 
 
 ### Edit post 
 ![EditPage](images/Edit.png)
 
+If the user wants to edit a post, on the homepage, they must click "EDIT". The user will be redirected to a new page, where the user will need to fill out a form regarding the name, the brand, the style, and upload a picture of their shoes. 
 
 ### Feed
 ![FeedPage](images/Timeline.png)
 
+If the user wants to checkout shoes from other users, on the navigation bar, they must click "TIMELINE". The user will be redirected to a new page, where the user will be able to see the most recent shoe posts from other users. 
 
 ### Logout 
 ![LogoutPage](images/Logout.png)
+
+If the user is done using the application, on the navigation bar, they must click "LOGOUT". The user will be redirected to the login page, where they have the option to signup or login to their session. 
 
 
 
