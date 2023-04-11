@@ -72,5 +72,4 @@ MIT LICENSE
 [SNEAKS](https://fathomless-lake-56395.herokuapp.com/)
 
 ## Screen Shots
-(./images/Login.png)
-
+https://github.com/Quailll/project-2/blob/main/images/Login.png
