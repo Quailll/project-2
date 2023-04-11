@@ -73,3 +73,20 @@ MIT LICENSE
 
 ## Screen Shots
 ![LoginPage](images/Login.png)
+
+![HomePage](images/Home.png)
+
+![PostPage](images/Post.png)
+
+![EditPage](images/Edit.png)
+
+![FeedPage](images/Timeline.png)
+
+![LogoutPage](images/Logout.png)
+
+
+
+
+
+
+
