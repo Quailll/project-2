@@ -76,14 +76,26 @@ MIT LICENSE
 ### Login/Signup 
 ![LoginPage](images/Login.png)
 
+When the user enters the website they will be directed to either login and/or signup. 
+--> New users can signup by creating a username and password. 
+--> If you already have singned up, all you need to do is login with your created username and password. 
+
+### Homepage
 ![HomePage](images/Home.png)
 
+### New post 
 ![PostPage](images/Post.png)
 
+
+### Edit post 
 ![EditPage](images/Edit.png)
 
+
+### Feed
 ![FeedPage](images/Timeline.png)
 
+
+### Logout 
 ![LogoutPage](images/Logout.png)
 
 
